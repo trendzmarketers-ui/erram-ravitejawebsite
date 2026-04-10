@@ -19,9 +19,9 @@ function decodeEmail(): string {
 }
 
 const socials = [
-  { icon: Mail, label: "Email", href: "#email" },
-  { icon: Linkedin, label: "LinkedIn", href: "#" },
-  { icon: Instagram, label: "Instagram", href: "#" },
+  { icon: Mail, label: "Email", href: "#email", alt: "Email Raviteja Erram" },
+  { icon: Linkedin, label: "LinkedIn", href: "#", alt: "Raviteja Erram official LinkedIn profile" },
+  { icon: Instagram, label: "Instagram", href: "#", alt: "Raviteja Erram official Instagram profile" },
 ];
 
 export function ContactSection() {
@@ -79,6 +79,7 @@ export function ContactSection() {
                 <span className="font-sans text-[0.85rem] tracking-[0.06em]">
                   {s.label}
                 </span>
+                <span className="sr-only">{s.alt}</span>
               </a>
             );
           })}

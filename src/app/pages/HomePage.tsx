@@ -12,14 +12,15 @@ import { useSEO } from "../hooks/useSEO";
 
 export function HomePage() {
   useSEO({
-    title: "Raviteja Erram — Entrepreneur, Designer & Creative Strategist",
+    title: "Raviteja Erram – Entrepreneur | Digital Marketing & Business Strategist",
     description:
-      "Explore the portfolio of Raviteja Erram — entrepreneur, designer, and creative strategist. Specializing in digital marketing, photography, brand identity, and business innovation in Hyderabad & Vizag.",
+      "Official website of Raviteja Erram. Entrepreneur, digital marketer, and founder working on Trend Z Marketers, SMT Enterprises, and innovative business ventures.",
     canonical: "https://ravitejaerram.com/",
   });
 
   return (
     <div className="bg-white">
+      <h1 className="sr-only">Raviteja Erram</h1>
       <Navbar />
       <HeroSection />
       <div className="border-b border-divider" />

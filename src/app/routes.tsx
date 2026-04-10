@@ -18,6 +18,12 @@ const ExperiencePage = lazy(() =>
 const BlogPage = lazy(() =>
   import("./pages/BlogPage").then((m) => ({ default: m.BlogPage }))
 );
+const AboutPage = lazy(() =>
+  import("./pages/AboutPage").then((m) => ({ default: m.AboutPage }))
+);
+const BlogPostPage = lazy(() =>
+  import("./pages/BlogPostPage").then((m) => ({ default: m.BlogPostPage }))
+);
 
 /** Minimal loading fallback — matches site bg to prevent flash */
 function LazyFallback() {
@@ -65,6 +71,22 @@ export const router = createBrowserRouter([
     element: (
       <Suspense fallback={<LazyFallback />}>
         <TermsConditions />
+      </Suspense>
+    ),
+  },
+  {
+    path: "/about",
+    element: (
+      <Suspense fallback={<LazyFallback />}>
+        <AboutPage />
+      </Suspense>
+    ),
+  },
+  {
+    path: "/:slug",
+    element: (
+      <Suspense fallback={<LazyFallback />}>
+        <BlogPostPage />
       </Suspense>
     ),
   },

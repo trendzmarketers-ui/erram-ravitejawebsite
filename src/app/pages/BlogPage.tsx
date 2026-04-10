@@ -63,9 +63,11 @@ export function BlogPage() {
                   <span>{post.readTime}</span>
                 </div>
                 
-                <h2 className="font-serif text-ink text-[1.5rem] md:text-[2rem] leading-[1.25] mb-4 group-hover:text-gold transition-colors duration-300">
-                  {post.title}
-                </h2>
+                <Link to={`/${post.id}`} className="no-underline">
+                  <h2 className="font-serif text-ink text-[1.5rem] md:text-[2rem] leading-[1.25] mb-4 group-hover:text-gold transition-colors duration-300">
+                    {post.title}
+                  </h2>
+                </Link>
                 
                 <p className="text-body text-[1rem] leading-[1.7] mb-6 line-clamp-3">
                   {post.excerpt}

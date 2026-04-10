@@ -22,6 +22,10 @@ export function Navbar() {
       navigate("/blog");
       return;
     }
+    if (link === "About") {
+      navigate("/about");
+      return;
+    }
     
     const id = link === "Creative" ? "creative-work" : link.toLowerCase();
     if (location.pathname !== "/") {
