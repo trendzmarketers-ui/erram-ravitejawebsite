@@ -1,0 +1,41 @@
+@import 'tailwindcss' source(none);
+@source '../**/*.{js,ts,jsx,tsx}';
+
+@import 'tw-animate-css';
+
+/*
+ * Custom design tokens for the Raviteja Erram portfolio.
+ * All brand colors, font families, and animations are defined here
+ * so components can use clean utility classes instead of inline styles.
+ */
+@theme inline {
+  /* ── Brand Colors ── */
+  --color-gold: #C6A769;
+  --color-gold-light: rgba(198, 167, 105, 0.08);
+  --color-gold-border: rgba(198, 167, 105, 0.15);
+  --color-gold-muted: rgba(198, 167, 105, 0.4);
+  --color-gold-text: #D6C6A8;
+
+  --color-ink: #111111;
+  --color-ink-dark: #0D0D0D;
+  --color-body: #666666;
+  --color-muted-text: #999999;
+  --color-faint: #BBBBBB;
+  --color-divider: #EAEAEA;
+  --color-surface: #F7F7F7;
+  --color-white: #FFFFFF;
+
+  /* ── Font Families ── */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-tight: 'Inter Tight', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* ── Animations ── */
+  --animate-hero-scroll-pulse: heroScrollPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes heroScrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.4); }
+}
