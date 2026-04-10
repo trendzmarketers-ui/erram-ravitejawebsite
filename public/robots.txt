@@ -1,0 +1,16 @@
+# robots.txt for ravitejaerram.com
+# Allow all search engines to crawl the entire site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ravitejaerram.com/sitemap.xml
+
+# Disallow common non-content paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /assets/
+
+# Crawl-delay for polite crawling (optional — respected by Bing, Yandex)
+Crawl-delay: 1

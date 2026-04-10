@@ -2,9 +2,17 @@ import { motion } from "motion/react";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router";
 import { useEffect } from "react";
+import { useSEO } from "../hooks/useSEO";
 
 export function TermsConditions() {
   const navigate = useNavigate();
+
+  useSEO({
+    title: "Terms & Conditions",
+    description:
+      "Review the terms and conditions for using ravitejaerram.com. Understand the rules for accessing and using the portfolio website of Raviteja Erram.",
+    canonical: "https://ravitejaerram.com/terms",
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);

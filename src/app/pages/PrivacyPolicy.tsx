@@ -2,9 +2,17 @@ import { motion } from "motion/react";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router";
 import { useEffect } from "react";
+import { useSEO } from "../hooks/useSEO";
 
 export function PrivacyPolicy() {
   const navigate = useNavigate();
+
+  useSEO({
+    title: "Privacy Policy",
+    description:
+      "Read the privacy policy for ravitejaerram.com. Learn how your personal information is collected, used, and protected when you visit the website.",
+    canonical: "https://ravitejaerram.com/privacy",
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);

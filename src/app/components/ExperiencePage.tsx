@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
+import { useSEO } from "../hooks/useSEO";
 import { motion, AnimatePresence } from "motion/react";
 import {
   ArrowLeft, ArrowUpRight, X,
@@ -73,6 +74,13 @@ export function ExperiencePage() {
   const navigate = useNavigate();
   const [spuModalOpen, setSpuModalOpen] = useState(false);
   const [sbsModalOpen, setSbsModalOpen] = useState(false);
+
+  useSEO({
+    title: "Professional Experience — Career, Skills & Achievements",
+    description:
+      "Explore the professional experience of Raviteja Erram — digital marketing leadership, brand transformations, 60+ campaigns, and ventures across healthcare, creative agencies, and technology.",
+    canonical: "https://ravitejaerram.com/experience",
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);

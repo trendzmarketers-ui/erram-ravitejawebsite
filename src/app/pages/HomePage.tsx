@@ -8,8 +8,16 @@ import { ProjectsSection } from "../components/ProjectsSection";
 import { IdeasSection } from "../components/IdeasSection";
 import { AboutSection } from "../components/AboutSection";
 import { ContactSection } from "../components/ContactSection";
+import { useSEO } from "../hooks/useSEO";
 
 export function HomePage() {
+  useSEO({
+    title: "Raviteja Erram — Entrepreneur, Designer & Creative Strategist",
+    description:
+      "Explore the portfolio of Raviteja Erram — entrepreneur, designer, and creative strategist. Specializing in digital marketing, photography, brand identity, and business innovation in Hyderabad & Vizag.",
+    canonical: "https://ravitejaerram.com/",
+  });
+
   return (
     <div className="bg-white">
       <Navbar />

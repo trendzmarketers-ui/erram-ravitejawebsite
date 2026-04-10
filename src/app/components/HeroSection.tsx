@@ -1,8 +1,6 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
 import type { MotionValue } from "motion/react";
-import bgImage from "@/assets/b7fa56197a3853d050dc2727eb29e0015e8a9fc6.png";
-import cutoutImage from "@/assets/raviteja-cutout.png";
 
 /* ═══════════════════════════════════════════════════════
    CINEMATIC HERO — Layered Typography + Fixed Cutout
@@ -21,6 +19,11 @@ import cutoutImage from "@/assets/raviteja-cutout.png";
      • Uses CSS position: sticky for a completely jitter-free pin.
      • useScroll + useSpring provides silky smooth interpolation.
      • Hardware acceleration enforced on images.
+
+   PERFORMANCE:
+     • Images served as optimized WebP from /public (~94KB vs 10.8MB)
+     • Progressive loading with blur-up placeholder for background
+     • fetchpriority="high" on critical images for LCP
    ═══════════════════════════════════════════════════════ */
 
 const HERO_TEXT = "RAVITEJA";
@@ -41,19 +44,43 @@ const textBase: React.CSSProperties = {
 /* ─── Layer Stack Sub-components ─── */
 
 function BackgroundImage() {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <div className="absolute inset-0 pointer-events-none" style={{ zIndex: -1 }}>
+      {/* Tiny blur placeholder — instant */}
       <img
-        src={bgImage}
+        src="/hero-bg-tiny.webp"
         alt=""
         aria-hidden="true"
         className="w-full h-full object-cover"
         style={{
           objectPosition: "center 20%",
+          filter: "blur(20px)",
+          transform: "scale(1.1) translateZ(0)",
+          opacity: loaded ? 0 : 1,
+          transition: "opacity 0.6s ease-out",
+          position: "absolute",
+          inset: 0,
+        }}
+        draggable={false}
+      />
+      {/* Full-res hero background */}
+      <img
+        src="/hero-bg.webp"
+        alt=""
+        aria-hidden="true"
+        fetchPriority="high"
+        className="w-full h-full object-cover"
+        style={{
+          objectPosition: "center 20%",
           willChange: "transform",
           transform: "translateZ(0)",
-          WebkitBackfaceVisibility: "hidden"
+          WebkitBackfaceVisibility: "hidden",
+          opacity: loaded ? 1 : 0,
+          transition: "opacity 0.6s ease-out",
         }}
+        onLoad={() => setLoaded(true)}
         draggable={false}
       />
       <div
@@ -84,8 +111,9 @@ function CutoutSubject() {
   return (
     <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 10 }}>
       <img
-        src={cutoutImage}
+        src="/hero-cutout.webp"
         alt="Raviteja Erram"
+        fetchPriority="high"
         className="w-full h-full object-cover"
         style={{
           objectPosition: "center 20%",

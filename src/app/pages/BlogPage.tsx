@@ -2,8 +2,16 @@ import { motion } from "motion/react";
 import { Navbar } from "../components/Navbar";
 import { ContactSection as Footer } from "../components/ContactSection";
 import { blogPosts } from "../data/blog";
+import { useSEO } from "../hooks/useSEO";
 
 export function BlogPage() {
+  useSEO({
+    title: "Blog — Design, Branding & Creative Strategy Insights",
+    description:
+      "Read insights on design thinking, visual storytelling, and brand strategy from Raviteja Erram. Explore articles on minimalism, creative direction, and modern digital design.",
+    canonical: "https://ravitejaerram.com/blog",
+  });
+
   return (
     <div className="bg-[#FAFAFA] min-h-screen text-body selection:bg-gold/20 font-sans">
       <Navbar />

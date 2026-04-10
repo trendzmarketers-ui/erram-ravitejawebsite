@@ -3,21 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raviteja Erram — Entrepreneur, Designer & Creator</title>
-    <meta name="description" content="Raviteja Erram is a multidisciplinary entrepreneur, designer, and creator working across digital marketing, photography, and business strategy." />
+
+    <!-- Primary Meta Tags -->
+    <title>Raviteja Erram — Entrepreneur, Designer & Creative Strategist</title>
+    <meta name="description" content="Raviteja Erram is an entrepreneur, designer, and creative strategist specializing in digital marketing, brand identity, photography, and business innovation based in Hyderabad & Visakhapatnam." />
+    <meta name="keywords" content="Raviteja Erram, entrepreneur, designer, digital marketing, brand strategy, photography, creative director, Hyderabad, Visakhapatnam, TrendZ Marketers, HiveSpaces" />
+    <meta name="author" content="Raviteja Erram" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#0D0D0D" />
     <link rel="canonical" href="https://ravitejaerram.com/" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Raviteja Erram — Entrepreneur, Designer & Creator" />
-    <meta property="og:description" content="Multidisciplinary professional working across photography, design, marketing, and business strategy." />
+    <!-- Preconnect to external origins for faster resource loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+
+    <!-- Google Fonts — loaded non-blocking via media swap trick -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <!-- Fallback for no-JS -->
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+    </noscript>
+
+    <!-- Preload critical hero images for instant LCP -->
+    <link rel="preload" href="/hero-bg.webp" as="image" type="image/webp" />
+    <link rel="preload" href="/hero-cutout.webp" as="image" type="image/webp" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="Raviteja Erram" />
+    <meta property="og:title" content="Raviteja Erram — Entrepreneur, Designer & Creative Strategist" />
+    <meta property="og:description" content="Entrepreneur and creative strategist specializing in digital marketing, brand identity, photography, and business innovation." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ravitejaerram.com/" />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Raviteja Erram — Entrepreneur, Designer & Creator" />
-    <meta name="twitter:description" content="Multidisciplinary professional working across photography, design, marketing, and business strategy." />
+    <meta name="twitter:title" content="Raviteja Erram — Entrepreneur, Designer & Creative Strategist" />
+    <meta name="twitter:description" content="Entrepreneur and creative strategist specializing in digital marketing, brand identity, photography, and business innovation." />
+    <meta name="twitter:creator" content="@ravitejaerram" />
+
+    <!-- JSON-LD Structured Data: Person + Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Raviteja Erram",
+      "url": "https://ravitejaerram.com",
+      "jobTitle": "Entrepreneur & Creative Strategist",
+      "description": "Multidisciplinary entrepreneur working across digital marketing, brand strategy, photography, and business innovation.",
+      "knowsAbout": [
+        "Digital Marketing",
+        "Brand Strategy",
+        "Photography",
+        "Graphic Design",
+        "Web Development",
+        "Interior Design",
+        "Business Consulting",
+        "AI Marketing Automation"
+      ],
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "TrendZ Marketers",
+          "url": "https://trendzmarketers.com",
+          "description": "Creative digital marketing agency focused on brand strategy, content creation, and performance marketing."
+        },
+        {
+          "@type": "Organization",
+          "name": "HiveSpaces",
+          "description": "Interior design studio specializing in modern residential and commercial spaces."
+        }
+      ],
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Andhra University"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Raghu Engineering College"
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/ravitejaerram/",
+        "https://www.instagram.com/ravitejaerram/"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD: Website SearchAction (sitelinks searchbox eligibility) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Raviteja Erram",
+      "url": "https://ravitejaerram.com",
+      "description": "Portfolio and professional profile of Raviteja Erram — entrepreneur, designer, and creative strategist.",
+      "publisher": {
+        "@type": "Person",
+        "name": "Raviteja Erram"
+      }
+    }
+    </script>
+
+    <!-- Inline critical styles to prevent FOUC -->
+    <style>
+      /* Critical CSS — prevent layout shift and flash of unstyled content */
+      body { margin: 0; background-color: #0D0D0D; }
+      #root { min-height: 100vh; }
+      /* Font fallback system — prevent invisible text while fonts load */
+      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    </style>
   </head>
 
   <body>
