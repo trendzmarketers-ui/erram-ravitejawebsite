@@ -3,6 +3,7 @@ import { HomePage } from "./pages/HomePage";
 import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 import { TermsConditions } from "./pages/TermsConditions";
 import { ExperiencePage } from "./components/ExperiencePage";
+import { BlogPage } from "./pages/BlogPage";
 
 export const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ export const router = createBrowserRouter([
   {
     path: "/experience",
     Component: ExperiencePage,
+  },
+  {
+    path: "/blog",
+    Component: BlogPage,
   },
   {
     path: "/privacy",

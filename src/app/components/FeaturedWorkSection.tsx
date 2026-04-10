@@ -90,8 +90,7 @@ export function FeaturedWorkSection() {
                 <img
                   src={work.img}
                   alt={work.title}
-                  className="w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  style={{ height: work.tall ? "480px" : "320px" }}
+                  className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${work.tall ? "aspect-[3/4]" : "aspect-[4/3]"}`}
                   loading="lazy"
                 />
                 <div
