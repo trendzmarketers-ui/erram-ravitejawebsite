@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { motion } from "motion/react";
 import { Navbar } from "../components/Navbar";
 import { ContactSection as Footer } from "../components/ContactSection";

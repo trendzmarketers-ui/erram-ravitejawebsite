@@ -164,7 +164,7 @@ export function BusinessCardModal({ isOpen, onClose }: BusinessCardModalProps) {
                       {[
                         { icon: Mail, text: "hello@ravitejaerram.com" },
                         { icon: Phone, text: "+91 XXXXX XXXXX" },
-                        { icon: Linkedin, text: "linkedin.com/in/ravitejaerram" },
+                        { icon: Linkedin, text: "linkedin.com/in/ravitejaerram", href: "https://www.linkedin.com/in/ravitejaerram/" },
                         { icon: Globe, text: "ravitejaerram.com" },
                       ].map(({ icon: Icon, text }) => (
                         <div key={text} className="flex items-center gap-3">

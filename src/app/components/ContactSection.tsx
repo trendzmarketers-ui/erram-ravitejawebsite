@@ -20,8 +20,8 @@ function decodeEmail(): string {
 
 const socials = [
   { icon: Mail, label: "Email", href: "#email", alt: "Email Raviteja Erram" },
-  { icon: Linkedin, label: "LinkedIn", href: "#", alt: "Raviteja Erram official LinkedIn profile" },
-  { icon: Instagram, label: "Instagram", href: "#", alt: "Raviteja Erram official Instagram profile" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/ravitejaerram/", alt: "Raviteja Erram official LinkedIn profile" },
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/ravitejaerram_/", alt: "Raviteja Erram official Instagram profile" },
 ];
 
 export function ContactSection() {
@@ -73,6 +73,7 @@ export function ContactSection() {
                 key={s.label}
                 href={s.href}
                 onClick={isEmail ? handleEmailClick : undefined}
+                {...(!isEmail && { target: "_blank", rel: "noopener noreferrer" })}
                 className="flex items-center gap-2 text-body no-underline transition-all duration-300 hover:text-ink group"
               >
                 <Icon size={18} />

@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { Link } from "react-router";
 import { ArrowUpRight } from "lucide-react";
 
-const PORTRAIT = "https://images.unsplash.com/photo-1770894807442-108cc33c0a7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMG1hbiUyMGRhcmslMjBiYWNrZ3JvdW5kfGVufDF8fHx8MTc3MzQxNDA3Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
+const PORTRAIT = "/raviteja-portrait.jpg";
 
 export function AboutSection() {
   return (
